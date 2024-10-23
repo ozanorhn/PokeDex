@@ -1,0 +1,95 @@
+.card.normal {
+    background-color: #A8A878;
+}
+
+.card.fire {
+    background-color: #F08030;
+}
+
+.card.water {
+    background-color: #6890F0;
+}
+
+.card.electric {
+    background-color: #F8D030;
+}
+
+.card.grass {
+    background-color: #78C850;
+}
+
+.card.ice {
+    background-color: #98D8D8;
+}
+
+.card.fighting {
+    background-color: #C03028;
+}
+
+.card.poison {
+    background-color: #A040A0;
+}
+
+.card.ground {
+    background-color: #E0C068;
+}
+
+.card.flying {
+    background-color: #A890F0;
+}
+
+.card.psychic {
+    background-color: #F85888;
+}
+
+.card.bug {
+    background-color: #A8B820;
+}
+
+.card.rock {
+    background-color: #B8A038;
+}
+
+.card.ghost {
+    background-color: #705898;
+}
+
+.card.dragon {
+    background-color: #7038F8;
+}
+
+.card.dark {
+    background-color: #705848;
+}
+
+.card.steel {
+    background-color: #B8B8D0;
+}
+
+.card.fairy {
+    background-color: #EE99AC;
+}
+
+.stat-bar.hp {
+    background-color: #FF5959;
+}
+
+.stat-bar.attack {
+    background-color: #F5AC78;
+}
+
+.stat-bar.defense {
+    background-color: #FAE078;
+}
+
+.stat-bar.specialattack {
+    background-color: #9DB7F5;
+}
+
+.stat-bar.specialdefense {
+    background-color: #A7DB8D;
+}
+
+.stat-bar.speed {
+    background-color: #FA92B2;
+}

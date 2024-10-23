@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+
+
+.pokedex-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    position: relative;
+    background-color: #FFCB05;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+}
+
+.pokemon-details {
+    flex: 1;
+}
+
+.pokemon-name {
+    margin: 0;
+    font-size: 2em;
+}
+
+.pokemon-number {
+    font-size: 1.2em;
+    opacity: 0.8;
+}
+
+.pokemon-types {
+    margin-top: 10px;
+}
+
+.type-icon {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 5px;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.pokemon-image-container {
+    position: relative;
+}
+
+.pokemon-image {
+    width: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+.pokeball-background {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 200px;
+    opacity: 0.1;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    margin-right: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab.active {
+    font-weight: bold;
+    color: #FFCB05;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFCB05;
+}
+
+/* Tab Content */
+.tab-content .tab-pane {
+    display: none;
+}
+
+.tab-content .tab-pane.active {
+    display: block;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Navigation Arrows */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-button {
+    background-color: #FFCB05;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #E0B004;
+}
+
+.text-center {
+    margin-bottom: 20px;
+}
+
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    position: relative;
+    height: 350px;
+    padding: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+
+.card h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.badge {
+    font-size: 0.85rem;
+    padding: 0.4rem;
+    margin-right: 0.5rem;
+    border-radius: 12px;
+    color: white;
+    display: inline-block;
+    margin: 5px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stat-name {
+    width: 120px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.stat-bar-container {
+    flex: 1;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.stat-bar {
+    height: 100%;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+}
+
+.stat-value {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #000;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.form-inline {
+    margin-right: 20px;
+}
+
+.evolution-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.evolution-image {
+    width: 150px;
+    margin: 0 10px;
+}
+
+.close {
+    background-color: #E0B004;
+    color: #000;
+    --bs-btn-border-color: red;
+    --bs-btn-hover-bg: hsla(11, 80%, 45%, 1);
+}
+
+.close hover {
+    background-color: #ea1616;
+    color: #000;
+    --bs-btn-border-color: red;
+}

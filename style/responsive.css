@@ -1,0 +1,144 @@
+@media (min-width: 577px) {
+    .closed {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card img {
+        height: 143px;
+    }
+
+    .card h5 {
+        font-size: 16px;
+        margin-bottom: 31px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .card img {
+        height: auto;
+        width: 180px;
+    }
+
+    .pokemon-image {
+        width: 222px;
+        bottom: -40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .pokeball-background {
+        top: 25px;
+        width: 175px;
+    }
+
+    .modal-content {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    .btn-close {
+        font-size: 1.5rem;
+        padding: 0.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .evolution-image {
+        width: 126px;
+    }
+}
+
+@media (max-width: 420px) and (min-width: 371px) {
+    .card img {
+        height: auto;
+        width: 160px;
+    }
+
+    .pokemon-image {
+        width: 222px;
+        bottom: -40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .btn-close {
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        display: block !important;
+    }
+
+    .evolution-image {
+        width: 110px;
+    }
+}
+
+@media (max-width: 370px) {
+    .card img {
+        height: auto;
+        width: 149px;
+    }
+
+    .pokemon-image {
+        width: 168px;
+        bottom: -40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .card h5 {
+        font-size: 15px;
+    }
+
+    .btn-close {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 366px) {
+    .card img {
+        height: auto;
+        width: 140px;
+    }
+
+    .evolution-image {
+        width: 95px;
+    }
+
+    .pokemon-image {
+        width: 148px;
+        bottom: -40px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .card h5 {
+        font-size: 15px;
+    }
+
+    .btn-close {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 333px) {
+    .card img {
+        height: auto;
+        width: 120px;
+    }
+}
+
+@media (max-width: 340px) and (min-width: 320px) {
+.btn-close {
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    display: block !important;
+}
+}

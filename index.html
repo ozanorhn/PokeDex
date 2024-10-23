@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokédex</title>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/bg.css">
+    <link rel="stylesheet" href="./style/responsive.css">
+    <script src="./script/utils.js"></script>
+    <script src="./script/template.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body onload="init()">
+
+    <header class="navbar navbar-light"
+        style="background-color: #ffcb05; justify-content: space-between; border-bottom: 5px solid #3b4cca;">
+        <a class="navbar-brand" href="./index.html">
+            <img src="./img/logo.jpg" alt="Pokémon Logo" style="height: 50px;">
+            Pokédex
+        </a>
+        <form class="form-inline">
+            <input class="form-control" type="search" placeholder="Suche" aria-label="Suche" id="search"
+                oninput="filterPokemon()" minlength="3">
+        </form>
+    </header>
+
+    <div class="container mt-4">
+        <div id="pokedex" class="row">
+        </div>
+
+        <div class="text-center mt-4">
+            <button id="loadMoreBtn" class="btn btn-primary" style="background-color: #ffcb05;"
+                onclick="loadMorePokemon()">Mehr laden</button>
+        </div>
+    </div>
+
+    <div id="loadingScreen" class="loading-screen">
+        <span>Pokemons are loading <img src="./img/sticker-fan_5001909_m.webp" alt=""> </span>
+    </div>
+
+    <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="pokemonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content pokedex-card">
+                <div class="card-header">
+                    <div class="pokemon-details">
+                        <h1 class="pokemon-name" id="pokemonName">Pokémon Name</h1>
+                        <span class="pokemon-number" id="pokemonNumber">#000</span>
+                        <div class="pokemon-types" id="pokemonTypes">
+                        </div>
+                    </div>
+                    <div class="pokemon-image-container">
+                        <div class="closed">
+                            <div class="d-flex justify-content-end">
+                                <button id="closeButton" type="button" class="btn-close btn btn-primary"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <img src="" alt="Pokémon Image" class="pokemon-image" id="modalPokemonImage">
+                        <img src="./img/images-removebg-preview.png" alt="Pokéball Background"
+                            class="pokeball-background">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <ul class="tabs">
+                        <li class="tab active" data-tab="about">About</li>
+                        <li class="tab" data-tab="stats">Base Stats</li>
+                        <li class="tab" data-tab="evolution">Evolution</li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="about" class="tab-pane active">
+                            <ul class="info-list" id="aboutInfo">
+                            </ul>
+                        </div>
+                        <div id="stats" class="tab-pane">
+                            <div id="statsInfo">
+                            </div>
+                        </div>
+                        <div id="evolution" class="tab-pane">
+                            <div id="evolutionImages" class="evolution-images">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="navigation">
+                    <button class="nav-button prev" id="prevButton">⟵</button>
+                    <button class="nav-button next" id="nextButton">⟶</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
