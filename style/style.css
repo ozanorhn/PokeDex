@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f0f0f0;
+background-image: url("../img/digital-art-style-illustration-thunderstorm.jpg");
     max-width: 1920px;
     margin: 0 auto;
     display: flex;
@@ -23,6 +23,19 @@ body.no-scroll {
     align-items: center;
     justify-content: center;
     z-index: 9999;
+}
+
+@font-face {
+    font-family: 'Pokemon';
+    src: url('../font/Pokemon\ Solid.ttf') format('truetype');
+}
+
+.pokemon-font {
+    font-family: 'Pokemon', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d8d8d8; /* Pokémon-Blau */
+    letter-spacing: 1px;
 }
 
 

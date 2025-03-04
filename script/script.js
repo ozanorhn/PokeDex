@@ -21,6 +21,20 @@ document.getElementById('nextButton').addEventListener('click', function () {
     showPokemonDetails(currentPokemonId + 1);
 });
 
+async function loadPokemonData(pokemonId) {
+    try {
+        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+        if (!response.ok) {
+            throw new Error(`Fehler: Pokémon mit ID ${pokemonId} nicht gefunden`);
+        }
+        let pokemonData = await response.json();
+        return pokemonData;
+    } catch (error) {
+        console.error("Fehler beim Laden des Pokémon:", error);
+        return null;
+    }
+}
+
 function showPokemonDetails(pokemonId) {
     fetchPokemonData(pokemonId)
         .then(function (pokemon) {
